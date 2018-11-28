@@ -1,0 +1,9 @@
+<div class="form-group">
+    <f:form.validationResults for="blog">
+        <label {f:if(condition:validationResults.flattenedErrors.title, then:class="text-danger")->f:form.validationResults(for: 'blog', as: 'validationResults')}>
+        Blog title
+        </label>
+    </f:form.validationResults>
+    <f:render partial="ErrorMessage" arguments="{property:'title',message:'Title-ERROR'}" />
+    <f:form.textfield property="title" class="form-control" />
+</div>

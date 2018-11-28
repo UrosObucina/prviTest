@@ -1,0 +1,28 @@
+{
+    "name": "blog/simpleblog",
+    "type": "typo3-cms-extension",
+    "description": "Try Blog extension.",
+    "authors": [
+        {
+            "name": "Uros",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blog\\Simpleblog\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Blog\\Simpleblog\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "simpleblog": "self.version",
+        "typo3-ter/simpleblog": "self.version"
+    }
+}

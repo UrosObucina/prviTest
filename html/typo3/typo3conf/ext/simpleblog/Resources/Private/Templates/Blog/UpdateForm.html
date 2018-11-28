@@ -1,0 +1,8 @@
+<div class="container-fluid" xmlns:f="http://www.w3.org/1999/xhtml">
+    <h1>Edit Blog</h1>
+    <f:form action="update" object="{blog}" name="blog" additionalAttributes="{role:'form'}">
+        <f:render partial="Blog/Form" arguments="{headline:'Dodaj novi blog',action:'update',submitmessage:'Crea\
+        te Blog!',blog:blog}" />
+        <f:form.submit value="Update Blog!" class="btn btn-primary" />
+    </f:form>
+</div>
