@@ -15,18 +15,11 @@ plugin.tx_simpleblog_bloglisting {
         storagePid = 31
         recursive = 1
         classes {
-            Pluswerk\Simpleblog\Domain\Model\Blog {
-                newRecordStoragePid = 32
-            }
-            Pluswerk\Simpleblog\Domain\Model\Post {
-                newRecordStoragePid = 33
-            }
-            Pluswerk\Simpleblog\Domain\Model\Comment {
-                newRecordStoragePid = 34
-            }
-            Pluswerk\Simpleblog\Domain\Model\Tag {
-                newRecordStoragePid = 35
-            }
+            Pluswerk\Simpleblog\Domain\Model\Author {
+                mapping {
+                    tableName = fe_users
+                    columns {
+                        name.mapOnProperty = fullname
         }
     }
     settings {
