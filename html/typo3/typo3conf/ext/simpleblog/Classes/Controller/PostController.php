@@ -31,7 +31,8 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $this->view->assign('blog',$blog);
         $this->view->assign('post',$post);
-        $this->view->assign('tags',$this->objectManager->get("\\Pluswerk\\Simpleblog\\Domain\\RepositoryBlogRepository")->findAll());
+        $this->view->assign('tags', $this->objectManager->get('Pluswerk\\Simpleblog\\Domain\\Repository\\TagRepository')->findAll());
+        $this->view->assign('authors', $this->objectManager->get('Pluswerk\\Simpleblog\\Domain\\Repository\\AuthorRepository')->findAll());
     }
     /**
      * @param \Pluswerk\Simpleblog\Domain\Model\Blog $blog
