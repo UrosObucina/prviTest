@@ -84,5 +84,4 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $post->postRepository->update($post);
         $this->reditect('show','Blog',NULL,array('blog'=>$blog));
     }
-    public function Secound(){}
 }
