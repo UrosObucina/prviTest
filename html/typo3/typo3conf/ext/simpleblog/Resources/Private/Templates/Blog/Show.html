@@ -16,14 +16,9 @@
                                    class="btn btn-primary btn-xs pull-right margin-right">SHOW
                     </f:link.action>
                 </li>
-                <li class="list-group-item">{post.title}
-                    <f:for each="{post.tags}" as="tag">
-                        <span class="label label-default">{tag.tagvalue}</span>
-                    </f:for>
-                    <f:link.action action="deleteConfirm" controller="Post" arguments="{blog:blog,post:post}" class="btn btn-primary btn-xs pull-right">
-                        DEL
-                    </f:link.action>
-                </li>
+                <f:for each="{post.tags}" as="tag" iteration="count">
+                    {tag.tagvalue}{f:if(condition:count.isLast,then:'',else:',')}
+                </f:for>
             </f:for>
         </ul>
     </f:if>

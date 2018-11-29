@@ -45,6 +45,7 @@ class BlogController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\PersistenceManager')->persistAll();
         // dodaje rezlutat upital findAll() => blogs
         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->blogRepository->findAll());die;
+        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->blogRepository->findAll());die;
         $this->view->assign('blogs', $this->blogRepository->findAll());
         //$this->view->assign('blogs', $this->blogRepository->getByTitle("Blog"));
         //$this->view->assign('blogs', $this->blogRepository->limitShow(6));
