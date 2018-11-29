@@ -21,7 +21,7 @@ plugin.tx_simpleblog_bloglisting {
             Pluswerk\Simpleblog\Domain\Model\Post {
                 newRecordStoragePid = 33
             }
-            Pluswerk\Simpleblog\Domain\Model\Comment {
+            Pluswerk\Simpleblog\Domain\Model\Comments {
                 newRecordStoragePid = 34
             }
             Pluswerk\Simpleblog\Domain\Model\Tag {
